@@ -1,10 +1,11 @@
 import Contenedor from "./pages🦋/contenedorApi";
 import Home from "./pages🦋/home1";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+
 
 function App() {
   return (
-    <BrowserRouter>
+      <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/contenedor" element={<Contenedor/>}/>

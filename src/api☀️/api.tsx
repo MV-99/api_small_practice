@@ -57,7 +57,18 @@ const RandomCharacter = () => {
     <div style={{ textAlign: "center", paddingLeft: "450px" }}>
       <h1>Rick and Morty Random Character</h1>
       <h2 style={{ color: "#575FB5" }}>{character.name}</h2>
-      <img src={character.image} alt={character.name} width={200} />
+      <img
+        style={{
+          width: "300px",
+          borderRadius: "200px",
+          borderColor: "#575FB5",
+          borderWidth: "6px",
+          borderStyle: "solid",
+        }}
+        src={character.image}
+        alt={character.name}
+        width={200}
+      />
       <p style={{ fontSize: "20px" }}>
         <a style={{ color: "#575FB5", fontWeight: "bold" }}>Status:</a>{" "}
         {character.status}
@@ -73,7 +84,7 @@ const RandomCharacter = () => {
       <button
         onClick={fetchRandomCharacter}
         style={{
-          marginTop: "10px",
+          marginTop: "-10px",
           padding: "9px 20px",
           border: "none",
           borderColor: "none",

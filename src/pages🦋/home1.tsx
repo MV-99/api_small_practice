@@ -3,11 +3,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import PinterestIcon from "@mui/icons-material/Pinterest";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <h3 className="texto-esquina">Kat</h3>
@@ -17,12 +16,34 @@ export default function Home() {
         <div className="texto-boton">
           <h1>Hi,</h1>
           <h1 style={{ marginTop: "-10px" }}>
-            I'm <a style={{ color: "#575FB5", fontWeight: "bold" }}>Kat</a>,
+            I'm{" "}
+            <a
+              style={{
+                color: "#575FB5",
+                fontWeight: "bold",
+                fontSize: "95px",
+                textAlign: "center",
+                userSelect: "none",
+                transition: "transform 0.3s ease, text-shadow 0.5s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(2.05)";
+                e.currentTarget.style.textShadow =
+                  "0 0 50px rgba(247, 17, 255, 0.7)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.textShadow = "none";
+              }}
+            >
+              Kat
+            </a>
+            ,
           </h1>
           <h1 style={{ marginTop: "-10px" }}>fronted intern</h1>
-          <button 
-          onClick={()=>navigate("/contenedor")}
-          className="boton">Watch Api Job</button>
+          <button onClick={() => navigate("/contenedor")} className="boton">
+            Watch Api Job
+          </button>
           {/*fila de iconos pequeños */}
           <div className="iconos">
             <GitHubIcon
