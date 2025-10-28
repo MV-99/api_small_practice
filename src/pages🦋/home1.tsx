@@ -1,4 +1,4 @@
-import "../styles/home.css";
+import "../styles🌈/home.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import YouTubeIcon from "@mui/icons-material/YouTube";

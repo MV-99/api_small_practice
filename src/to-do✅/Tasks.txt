@@ -1,0 +1,5 @@
+COSAS POR HACER AUN:
+-hacer el home✅
+-hacer la navegacion a pantalla de Api
+-buscar idea de api a poner en la segunda pantalla
+-consumir api
