@@ -1,0 +1,42 @@
+.texto-esquina {
+  position: fixed; /* O absolute, según el caso */
+  top: 0;
+  left: 0;
+  margin: 10px;
+  padding: 0;
+  text-align: left;
+  padding-left: 90px;
+}
+.texto-boton {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 30px;
+  padding-left: 90px;
+}
+.boton {
+  width: 300px;
+  height: 70px;
+  color: white;
+  background-color: #575fb5;
+  font-size: 25px;
+   border:none;
+  outline: none;
+  border-radius: 40px;
+  margin-top: -20px;
+  border-color: none;
+  border-style: none;
+  box-shadow: none;
+   cursor: pointer;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.iconos{
+  display:flex;
+  flex-direction: row;
+  gap:50px;
+  color:white;
+
+}

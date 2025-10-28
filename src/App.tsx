@@ -1,10 +1,11 @@
+import Home from '../src/pages/home1.tsx';
 
 function App() {
   
 
   return (
     <div>
-    <h1 style={{color:'white'}}>hola gabriela</h1>
+     <Home/>
     </div>
    
   )
