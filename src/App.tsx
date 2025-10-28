@@ -1,11 +1,13 @@
-import Home from './pages🦋/home1.tsx';
+import RandomCharacter from "./api☀️/api.tsx"
+
 
 function App() {
   
 
   return (
     <div>
-     <Home/>
+   
+     <RandomCharacter/>
     </div>
    
   )
