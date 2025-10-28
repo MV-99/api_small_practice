@@ -3,8 +3,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import { useNavigate} from "react-router-dom";
 
 export default function Home() {
+
+  const navigate=useNavigate();
   return (
     <div>
       <h3 className="texto-esquina">Kat</h3>
@@ -17,7 +20,9 @@ export default function Home() {
             I'm <a style={{ color: "#575FB5", fontWeight: "bold" }}>Kat</a>,
           </h1>
           <h1 style={{ marginTop: "-10px" }}>fronted intern</h1>
-          <button className="boton">Watch Api Job</button>
+          <button 
+          onClick={()=>navigate("/contenedor")}
+          className="boton">Watch Api Job</button>
           {/*fila de iconos pequeños */}
           <div className="iconos">
             <GitHubIcon

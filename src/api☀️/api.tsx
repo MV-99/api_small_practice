@@ -16,8 +16,9 @@ interface Character {
 //como se estructura la peticion??
 //como se da el uso del use y fetch
 
-const RandomCharacter = () => { //funcion madre 
-    //constantes de trabajo
+const RandomCharacter = () => {
+  //funcion madre
+  //constantes de trabajo
   const [character, setCharacter] = useState<Character | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -28,7 +29,7 @@ const RandomCharacter = () => { //funcion madre
     try {
       // endpoint de personajes  los de la page 1
       const response = await axios.get(
-        "https://rickandmortyapi.com/api/character" //url api 
+        "https://rickandmortyapi.com/api/character" //url api
       );
       const characters = response.data.results;
 
@@ -48,29 +49,42 @@ const RandomCharacter = () => { //funcion madre
   useEffect(() => {
     fetchRandomCharacter();
   }, []);
- //sms de carga de la pagina
+  //sms de carga de la pagina
   if (loading) return <div>Loading character...</div>;
   if (!character) return <div>No character found.</div>;
 
   return (
-    <div style={{ textAlign: "center", paddingLeft:'450px' }}>
+    <div style={{ textAlign: "center", paddingLeft: "450px" }}>
       <h1>Rick and Morty Random Character</h1>
-      <h2 style={{color:'#575FB5'}}>{character.name}</h2>
+      <h2 style={{ color: "#575FB5" }}>{character.name}</h2>
       <img src={character.image} alt={character.name} width={200} />
-      <p style={{fontSize:'20px'}}><a style={{color:'#575FB5', fontWeight:'bold'}}>Status:</a> {character.status}</p>
-      <p style={{fontSize:'20px'}}><a style={{color:'#575FB5', fontWeight:'bold'}}>Species:</a> {character.species}</p>
-      <p style={{fontSize:'20px'}}><a style={{color:'#575FB5', fontWeight:'bold'}}>Gender:</a> {character.gender}</p>
+      <p style={{ fontSize: "20px" }}>
+        <a style={{ color: "#575FB5", fontWeight: "bold" }}>Status:</a>{" "}
+        {character.status}
+      </p>
+      <p style={{ fontSize: "20px" }}>
+        <a style={{ color: "#575FB5", fontWeight: "bold" }}>Species:</a>{" "}
+        {character.species}
+      </p>
+      <p style={{ fontSize: "20px" }}>
+        <a style={{ color: "#575FB5", fontWeight: "bold" }}>Gender:</a>{" "}
+        {character.gender}
+      </p>
       <button
         onClick={fetchRandomCharacter}
-        style={{ marginTop: "10px", padding: "8px 16px", border:'none', borderColor:'none', 
-            outline:'none', color:'white',
-            backgroundColor:'#575FB5', 
-            borderRadius:'40px'
+        style={{
+          marginTop: "10px",
+          padding: "9px 20px",
+          border: "none",
+          borderColor: "none",
+          outline: "none",
+          color: "white",
+          backgroundColor: "#575FB5",
+          borderRadius: "40px",
         }}
       >
         Change
       </button>
-      
     </div>
   );
 };

@@ -1,16 +1,16 @@
-import RandomCharacter from "./api☀️/api.tsx"
-
+import Contenedor from "./pages🦋/contenedorApi";
+import Home from "./pages🦋/home1";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  
-
   return (
-    <div>
-   
-     <RandomCharacter/>
-    </div>
-   
-  )
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/contenedor" element={<Contenedor/>}/>
+    </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
